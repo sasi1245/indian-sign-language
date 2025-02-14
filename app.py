@@ -18,8 +18,13 @@ if not os.path.exists(MODEL_PATH):
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # Define class labels (Update with actual dataset labels)
-dataset_path = "dataset"  # Change this to your dataset path
-CLASS_LABELS = {i: label for i, label in enumerate(sorted(os.listdir(dataset_path)))}
+
+CLASS_LABELS = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9",
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+    "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+]
+
 
 
 # Function to preprocess image
